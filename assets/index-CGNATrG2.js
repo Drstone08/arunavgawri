@@ -623,4 +623,4 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
               transform: scale(3) translate(-50%, -50%);
             }
           }
-        `})]})},ey=()=>h.jsxs("div",{className:"flex",children:[h.jsx(Zv,{}),h.jsxs(xv,{children:[h.jsx(ar,{path:"/",element:h.jsx(jg,{})}),h.jsx(ar,{path:"/about",element:h.jsx(Ep,{})}),h.jsx(ar,{path:"/contact",element:h.jsx(Cp,{})}),h.jsx(ar,{path:"/works",element:h.jsx(kp,{})}),h.jsx(ar,{path:"/skills",element:h.jsx(Sp,{})})]})]});Hh.createRoot(document.getElementById("root")).render(h.jsx(_.StrictMode,{children:h.jsx(Bv,{children:h.jsx(ey,{})})}));
+        `})]})},ey=()=>h.jsxs("div",{className:"flex",children:[h.jsx(Zv,{}),h.jsxs(xv,{children:[h.jsx(ar,{path:"/",element:h.jsx(jg,{})}),h.jsx(ar,{path:"/about",element:h.jsx(Ep,{})}),h.jsx(ar,{path:"/contact",element:h.jsx(Cp,{})}),h.jsx(ar,{path:"/works",element:h.jsx(kp,{})}),h.jsx(ar,{path:"/skills",element:h.jsx(Sp,{})})]})]});Hh.createRoot(document.getElementById("root")).render(h.jsx(_.StrictMode,{children:h.jsx(Bv,{basename:"/arunavgawri",children:h.jsx(ey,{})})}));
