@@ -6,25 +6,24 @@ import Works from "./Works";
 import Skills from "./Skills";
 import About from "./About";
 import Contact from "./Contact";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaDownload,
-  FaArrowUp,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub, FaDownload, FaArrowUp } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
+import { Link } from "react-scroll"; 
 
 function Home() {
-  const [showIcons, setShowIcons] = useState(true); // State for showing icons
-  const [showTopButton, setShowTopButton] = useState(false); // State for "Go to Top" button
+  const [showIcons, setShowIcons] = useState(true);
+  const [showTopButton, setShowTopButton] = useState(false);
   const ref = useRef(null);
   const inview = useInView(ref, { once: true });
 
+  const worksRef = useRef(null);
+  const skillsRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
   const handlescroll = () => {
     let heighttohide = 250;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > heighttohide) {
       setShowTopButton(true);
     } else {
@@ -34,8 +33,7 @@ function Home() {
 
   const handlesideicon = () => {
     let heighttohide = 2200;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > heighttohide) {
       setShowIcons(false);
     } else {
@@ -48,7 +46,6 @@ function Home() {
     window.addEventListener("scroll", handlesideicon);
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -62,43 +59,27 @@ function Home() {
 
   return (
     <div className="bg-[#272B34] min-h-screen w-full">
-      {/* Fixed vertical icons */}
       <div
         className="fixed top-1/2 left-6 transform -translate-y-1/2 flex flex-col items-center space-y-5"
         ref={ref}
       >
         <motion.div
           className="border-r-2 h-[170px] border-gray-500 origin-top"
-          initial={{ scaleY: 0 }} // Start with no height
-          animate={showIcons ? { scaleY: 1 } : { scaleY: 0 }} // Shrink when `showIcons` is false
-          transition={{ duration: 1.5, ease: "easeInOut" }} // Smooth transition
+          initial={{ scaleY: 0 }}
+          animate={showIcons ? { scaleY: 1 } : { scaleY: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
           exit={showIcons ? { scaleY: 0 } : { scaleY: 1 }}
         ></motion.div>
         <ul className="space-y-5">
-          <li
-            onClick={() =>
-              window.open(
-                "https://www.instagram.com/arunavgawri/?__pwa=1",
-                "_blank"
-              )
-            }
-          >
+          <li onClick={() => window.open("https://www.instagram.com/arunavgawri/?__pwa=1", "_blank")}>
             <FaInstagram className="text-3xl text-gray-500 cursor-pointer hover:text-white transition-all duration-300 ease-in-out" />
           </li>
           <li>
-            <a
-              href="https://www.linkedin.com/in/arunav-gawri-314897250"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/arunav-gawri-314897250" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-3xl text-gray-500 cursor-pointer hover:text-white transition-all duration-300 ease-in-out" />
             </a>
           </li>
-          <li
-            onClick={() =>
-              window.open("https://github.com/Drstone08", "_blank")
-            }
-          >
+          <li onClick={() => window.open("https://github.com/Drstone08", "_blank")}>
             <FaGithub className="text-3xl text-gray-500 cursor-pointer hover:text-white transition-all duration-300 ease-in-out" />
           </li>
           <li onClick={handleresume}>
@@ -108,13 +89,12 @@ function Home() {
 
         <motion.div
           className="border-r-2 h-[170px] border-gray-500 origin-bottom"
-          initial={{ scaleY: 0 }} // Start with no height
-          animate={showIcons ? { scaleY: 1 } : { scaleY: 0 }} // Shrink when `showIcons` is false
-          transition={{ duration: 1.5, ease: "easeInOut" }} // Smooth transition
+          initial={{ scaleY: 0 }}
+          animate={showIcons ? { scaleY: 1 } : { scaleY: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         ></motion.div>
       </div>
 
-      {/* "Go to Top" Button */}
       {showTopButton && (
         <button
           onClick={scrollToTop}
@@ -124,19 +104,18 @@ function Home() {
         </button>
       )}
 
-      {/* Main content */}
       <div className="pl-[150px]">
         <Navbar />
-        <Page />
+        <section id="home">
+          <Page />
+        </section>
         <div className="relative mt-5 text-white p-6 rounded-lg w-[900px] mr-[330px] mx-auto justify-center items-center">
           <div className="border border-gray-500 rounded-lg p-6 relative">
             <div className="absolute -top-4 -left-4 text-3xl text-gray-500">
               &#8220;
             </div>
             <p className="text-xl font-mono">
-              Your work is going to fill a large part of your life, and the only
-              way to be truly satisfied is to do what you believe is great work.
-              And the only way to do great work is to love what you do.
+              Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.
             </p>
             <div className="absolute -bottom-4 -right-4 text-3xl text-gray-500">
               &#8221;
@@ -146,14 +125,27 @@ function Home() {
             <span className="text-lg font-mono">- Steve Jobs</span>
           </div>
         </div>
+        
+        {/* Assigning ids to sections for scroll navigation */}
+        
 
-        <Works />
-        <Skills />
-        <About />
-        <Contact />
+        <section id="works" ref={worksRef}>
+          <Works />
+        </section>
+
+        <section id="skills" ref={skillsRef}>
+          <Skills />
+        </section>
+
+        <section id="about-me" ref={aboutRef}>
+          <About />
+        </section>
+
+        <section id="contact" ref={contactRef}>
+          <Contact />
+        </section>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
