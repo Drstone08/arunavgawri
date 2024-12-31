@@ -1,16 +1,11 @@
 import React from "react";
 import photo from "../assets/myphoto.png";
+import Head from '../components/Head'
 
 const About = () => {
   return (
     <div className="w-full my-5 ">
-      <div className="flex flex-row items-center">
-        <h1 className="text-3xl font-firacode text-gray-500">
-          <span className="text-violet-500">#</span>
-          About-me
-        </h1>
-        <div className="h-[2px] mt-2 w-[500px] bg-violet-500"></div>
-      </div>
+      =<Head name='About' />
       <div className="flex flex-row">
         <div className="flex flex-col w-[50%] p-10 m-5">
           <h1 className="text-2xl font-firacode text-gray-400 mb-4">

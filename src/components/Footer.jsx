@@ -14,24 +14,45 @@ const Footer = () => {
               Arunav Gawri
             </h1>
           </div>
-          <p className="text-lg leading-relaxed">
-            Web Developer and Designer
-          </p>
+          <p className="text-lg leading-relaxed">Web Developer and Designer</p>
         </div>
 
         {/* Right Section: Social Media */}
         <div className="flex flex-col items-center gap-4 pr-[100px]">
-          <h1 className="text-2xl font-bold font-mono text-violet-600">Media</h1>
+          <h1 className="text-2xl font-bold font-mono text-violet-600">
+            Media
+          </h1>
           <div className="flex gap-6">
-            <FaInstagram className="text-3xl text-gray-500 hover:text-gray-300 transition duration-200 cursor-pointer" />
-            <FaLinkedin className="text-3xl text-gray-500 hover:text-gray-300 transition duration-200 cursor-pointer" />
-            <FaGithub className="text-3xl text-gray-500 hover:text-gray-300 transition duration-200 cursor-pointer" />
+            <FaInstagram
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/arunavgawri/?__pwa=1",
+                  "_blank"
+                )
+              }
+              className="text-3xl text-gray-500 hover:text-gray-300 transition duration-200 cursor-pointer"
+            />
+            <FaLinkedin
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/arunav-gawri-314897250",
+                  "_blank"
+                )
+              }
+              className="text-3xl text-gray-500 hover:text-gray-300 transition duration-200 cursor-pointer"
+            />
+            <FaGithub
+              onClick={() =>
+                window.open("https://github.com/Drstone08", "_blank")
+              }
+              className="text-3xl text-gray-500 hover:text-gray-300 transition duration-200 cursor-pointer"
+            />
           </div>
         </div>
       </div>
 
       {/* Footer Section */}
-      <div className="flex justify-center items-center pt-4 mb-2">
+      <div className="flex justify-center items-center pt-4 mb-2 -z-1">
         <p className="text-sm text-gray-500">
           {" "}
           &copy; Copyright 2025 Made By Arunav.

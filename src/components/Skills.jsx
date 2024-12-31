@@ -1,17 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
+import Head from "./Head";
 
 const Skills = () => {
   return (
     <div className="w-full my-24">
-      <div className="flex flex-row items-center">
-        <h1 className="text-3xl font-firacode text-gray-500">
-          <span className="text-violet-500">#</span>
-          Skills
-        </h1>
-        <div className="h-[2px] mt-2 w-[500px] bg-violet-500"></div>
-      </div>
+      <Head name='Skills' />
       <div className="flex flex-row">
         <div className="w-[400px] h-[300px] flex justify-center items-center">
           <div className="relative w-full h-full flex flex-wrap items-center justify-center">

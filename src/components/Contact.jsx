@@ -1,16 +1,11 @@
 import React from "react";
 import { FaGamepad, FaMailBulk, FaMailchimp, FaWhatsapp } from "react-icons/fa";
+import Head from "./Head";
 
 const Contact = () => {
   return (
     <div className="w-full my-5 pb-10">
-      <div className="flex flex-row items-center">
-        <h1 className="text-3xl font-firacode text-gray-500">
-          <span className="text-violet-500">#</span>
-          Contacts
-        </h1>
-        <div className="h-[2px] mt-2 w-[500px] bg-violet-500"></div>
-      </div>
+      <Head name='Contact' />
       <div className="flex flex-row items-start space-x-5">
         {/* Left Section */}
         <div className="flex flex-col w-[50%] p-10 m-5">
