@@ -6,9 +6,10 @@ import Head from "./Head";
 const Skills = () => {
   return (
     <div className="w-full my-24">
-      <Head name='Skills' />
-      <div className="flex flex-row">
-        <div className="w-[400px] h-[300px] flex justify-center items-center">
+      <Head name="Skills" />
+      <div className="flex flex-col lg:flex-row items-center lg:items-start">
+        {/* Graphic Section */}
+        <div className="w-[400px] h-[300px] flex justify-center items-center mb-10 lg:mb-0">
           <div className="relative w-full h-full flex flex-wrap items-center justify-center">
             {/* Top-left grid */}
             <div className="absolute top-10 left-10 grid grid-cols-5 gap-2">
@@ -40,7 +41,9 @@ const Skills = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-5 m-6 ml-20">
+
+        {/* Skills Section */}
+        <div className="flex flex-wrap justify-center lg:justify-start gap-5 m-6 lg:ml-20">
           <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded">
             <h1 className="text-2xl font-sourcecode text-violet-600 p-1 text-center font-semibold">
               Language
@@ -49,47 +52,41 @@ const Skills = () => {
               C C++<br></br>Python Java
             </p>
           </div>
+
           <div className="flex flex-col gap-5">
             <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded">
               <h1 className="text-2xl font-sourcecode text-violet-600 p-1 text-center font-semibold">
-                Language
+                Databases
               </h1>
               <p className="border-t-2 border-gray-500 text-slate-300 p-1 text-lg font-ibmplex text-center">
-                C C++<br></br>Python Java
+                Sql MongoDB<br></br>Mysql
               </p>
             </div>
             <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded">
               <h1 className="text-2xl font-sourcecode text-violet-600 p-1 text-center font-semibold">
-                Language
+                Web Dev
               </h1>
               <p className="border-t-2 border-gray-500 text-slate-300 p-1 text-lg font-ibmplex text-center">
-                C C++<br></br>Python Java
+                JS TS<br></br>Node EJS
               </p>
             </div>
           </div>
+
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded ">
+            <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded">
               <h1 className="text-2xl font-sourcecode text-violet-600 p-1 text-center font-semibold">
-                Language
+                Tools
               </h1>
               <p className="border-t-2 border-gray-500 text-slate-300 p-1 text-lg font-ibmplex text-center">
-                C C++<br></br>Python Java
+                AI PS<br></br>Figma Git
               </p>
             </div>
             <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded">
               <h1 className="text-2xl font-sourcecode text-violet-600 p-1 text-center font-semibold">
-                Language
+                FrameWorks
               </h1>
               <p className="border-t-2 border-gray-500 text-slate-300 p-1 text-lg font-ibmplex text-center">
-                C C++<br></br>Python Java
-              </p>
-            </div>
-            <div className="flex flex-col border-2 border-gray-500 h-max w-[200px] rounded">
-              <h1 className="text-2xl font-sourcecode text-violet-600 p-1 text-center font-semibold">
-                Language
-              </h1>
-              <p className="border-t-2 border-gray-500 text-slate-300 p-1 text-lg font-ibmplex text-center">
-                C C++<br></br>Python Java
+                React Wordpress<br></br>Express Next
               </p>
             </div>
           </div>

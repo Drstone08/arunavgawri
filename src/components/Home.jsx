@@ -6,9 +6,15 @@ import Works from "./Works";
 import Skills from "./Skills";
 import About from "./About";
 import Contact from "./Contact";
-import { FaInstagram, FaLinkedin, FaGithub, FaDownload, FaArrowUp } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaDownload,
+  FaArrowUp,
+} from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
-import { Link } from "react-scroll"; 
+import { Link } from "react-scroll";
 
 function Home() {
   const [showIcons, setShowIcons] = useState(true);
@@ -23,7 +29,8 @@ function Home() {
 
   const handlescroll = () => {
     let heighttohide = 250;
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > heighttohide) {
       setShowTopButton(true);
     } else {
@@ -33,7 +40,8 @@ function Home() {
 
   const handlesideicon = () => {
     let heighttohide = 2200;
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > heighttohide) {
       setShowIcons(false);
     } else {
@@ -71,15 +79,30 @@ function Home() {
           exit={showIcons ? { scaleY: 0 } : { scaleY: 1 }}
         ></motion.div>
         <ul className="space-y-5">
-          <li onClick={() => window.open("https://www.instagram.com/arunavgawri/?__pwa=1", "_blank")}>
+          <li
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/arunavgawri/?__pwa=1",
+                "_blank"
+              )
+            }
+          >
             <FaInstagram className="text-3xl text-gray-500 cursor-pointer hover:text-white transition-all duration-300 ease-in-out" />
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/arunav-gawri-314897250" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/arunav-gawri-314897250"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="text-3xl text-gray-500 cursor-pointer hover:text-white transition-all duration-300 ease-in-out" />
             </a>
           </li>
-          <li onClick={() => window.open("https://github.com/Drstone08", "_blank")}>
+          <li
+            onClick={() =>
+              window.open("https://github.com/Drstone08", "_blank")
+            }
+          >
             <FaGithub className="text-3xl text-gray-500 cursor-pointer hover:text-white transition-all duration-300 ease-in-out" />
           </li>
           <li onClick={handleresume}>
@@ -104,30 +127,36 @@ function Home() {
         </button>
       )}
 
-      <div className="pl-[150px]">
-        <Navbar />
+      <div className="sm:pl-[150px] pl-[60px]">
+        <div className="pt-5 sm:pr-16 pr-3">
+          <Navbar />
+        </div>
+
         <section id="home">
           <Page />
         </section>
-        <div className="relative mt-5 text-white p-6 rounded-lg w-[900px] mr-[330px] mx-auto justify-center items-center">
-          <div className="border border-gray-500 rounded-lg p-6 relative">
-            <div className="absolute -top-4 -left-4 text-3xl text-gray-500">
+        <div className="relative mt-5 text-white p-4 sm:p-6 rounded-lg w-full max-w-[900px] mx-auto sm:w-[90%] lg:w-[900px] pr-[50px] sm:mr-[300px]">
+          <div className="border border-gray-500 rounded-lg p-4 sm:p-6 relative">
+            <div className="absolute -top-4 -left-4 text-2xl sm:text-3xl text-gray-500">
               &#8220;
             </div>
-            <p className="text-xl font-mono">
-              Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.
+            <p className="text-sm sm:text-lg lg:text-xl font-mono leading-relaxed">
+              Your work is going to fill a large part of your life, and the only
+              way to be truly satisfied is to do what you believe is great work.
+              And the only way to do great work is to love what you do.
             </p>
-            <div className="absolute -bottom-4 -right-4 text-3xl text-gray-500">
+            <div className="absolute -bottom-4 -right-4 text-2xl sm:text-3xl text-gray-500">
               &#8221;
             </div>
           </div>
           <div className="flex justify-end mt-4">
-            <span className="text-lg font-mono">- Steve Jobs</span>
+            <span className="text-sm sm:text-base lg:text-lg font-mono">
+              - Steve Jobs
+            </span>
           </div>
         </div>
-        
+
         {/* Assigning ids to sections for scroll navigation */}
-        
 
         <section id="works" ref={worksRef}>
           <Works />
@@ -143,9 +172,8 @@ function Home() {
 
         <section id="contact" ref={contactRef}>
           <Contact />
-        </section>
+        </section> 
       </div>
-
       <Footer />
     </div>
   );

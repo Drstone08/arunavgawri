@@ -12,14 +12,5 @@ const Works = () => {
     </div>
   );
 };
-{/* <button className="text-2xl ml-[350px] text-gray-500 font-patrick flex items-center hover:text-gray-300 transition duration-200">
-  View all
-  <FontAwesomeIcon
-    icon={faHandPointRight}
-    className="ml-2 text-2xl"
-    style={{ color: "pink" }}
-  />{" "}
-  {/* Hand-point-right icon */}
-// </button> */}
 
 export default Works;
