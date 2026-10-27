@@ -1,80 +1,39 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      colors: {
+        ink: '#272B34',
+        'ink-deep': '#1F232B',
+      },
       fontFamily: {
-        'JetBrains Mono': ['JetBrains Mono', 'monospace'],
-        'poppins': ['Poppins', 'sans-serif'],
-        'orbitron': ['Orbitron', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif'],
-        opensans: ['Open Sans', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
-        lato: ['Lato', 'sans-serif'],
-        merriweather: ['Merriweather', 'serif'],
-        playfair: ['Playfair Display', 'serif'],
-        georgia: ['Georgia', 'serif'],
-        libre: ['Libre Baskerville', 'serif'],
-        cormorant: ['Cormorant', 'serif'],
-        oswald: ['Oswald', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif'],
-        abril: ['Abril Fatface', 'serif'],
-        amatic: ['Amatic SC', 'cursive'],
-        pacifico: ['Pacifico', 'cursive'],
-        firacode: ['Fira Code', 'monospace'],
-        sourcecode: ['Source Code Pro', 'monospace'],
-        ibmplex: ['IBM Plex Mono', 'monospace'],
-        dancing: ['Dancing Script', 'cursive'],
-        greatvibes: ['Great Vibes', 'cursive'],
-        patrick: ['Patrick Hand', 'cursive'],
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        code: ['"Fira Code"', 'ui-monospace', 'monospace'],
       },
       keyframes: {
-        moveGlow: {
-          '0%': {
-            borderColor: '#ff66cc', // Light starts at the top-left corner
-            boxShadow: '0px 0px 15px 5px rgba(255, 102, 204, 0.8)',
-          },
-          '25%': {
-            borderColor: '#ff66cc', // Move to top-right corner
-            boxShadow: '0px 0px 15px 5px rgba(255, 102, 204, 0.8)',
-          },
-          '50%': {
-            borderColor: '#ff66cc', // Move to bottom-right corner
-            boxShadow: '0px 0px 15px 5px rgba(255, 102, 204, 0.8)',
-          },
-          '75%': {
-            borderColor: '#ff66cc', // Move to bottom-left corner
-            boxShadow: '0px 0px 15px 5px rgba(255, 102, 204, 0.8)',
-          },
-          '100%': {
-            borderColor: '#ff66cc', // Return to the top-left corner
-            boxShadow: '0px 0px 15px 5px rgba(255, 102, 204, 0.8)',
-          },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       animation: {
-        moveGlow: 'moveGlow 3s linear infinite', // Apply animation to the text border
+        blink: 'blink 1s step-end infinite',
+        'fade-up': 'fade-up 0.6s ease-out both',
       },
-      animation: {
-        'pulse-slow': 'pulse 4s infinite',
-        'move-lines': 'move 6s linear infinite',
+      backgroundImage: {
+        'dot-grid':
+          'radial-gradient(circle, rgba(148, 163, 184, 0.2) 1px, transparent 1px)',
       },
-      keyframes: {
-        pulse: {
-          '0%, 100%': { opacity: 0.5 },
-          '50%': { opacity: 1 },
-        },
-        move: {
-          '0%': { transform: 'translateX(-20px)' },
-          '50%': { transform: 'translateX(20px)' },
-          '100%': { transform: 'translateX(0)' },
-        },
+      backgroundSize: {
+        'dot-grid': '18px 18px',
       },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
 };

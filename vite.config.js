@@ -1,15 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from "tailwindcss";
-import { ghPages } from 'vite-plugin-gh-pages';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// Relative base keeps the build portable across GitHub Pages, Vercel, and local previews.
 export default defineConfig({
-  plugins: [react(),ghPages()],
-  base: '/arunavgawri/',
-  css: {
-    postcss: {
-      plugins: [tailwindcss()],
-    },
-  },
-})
+  plugins: [react()],
+  base: './',
+});
