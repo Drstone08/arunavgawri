@@ -4,7 +4,7 @@ import {
   FaDownload,
   FaGraduationCap,
 } from 'react-icons/fa';
-import photo from '../assets/myphoto.webp';
+import photo from '../assets/coorg.webp';
 import { achievements, facts, profile, RESUME_URL } from '../data/resume';
 import Section from './Section';
 
@@ -81,12 +81,12 @@ export default function About() {
             />
             <img
               src={photo}
-              alt="Arunav Gawri standing with a backpack"
-              width="600"
-              height="1110"
+              alt="Arunav Gawri in Coorg"
+              width="424"
+              height="414"
               loading="lazy"
               decoding="async"
-              className="relative z-10 mx-auto h-[320px] w-full max-w-full object-contain object-bottom sm:h-[380px]"
+              className="relative z-10 aspect-square w-full object-cover object-center"
             />
           </div>
 

@@ -1,5 +1,5 @@
 import { FaArrowRight, FaDownload } from 'react-icons/fa';
-import photo from '../assets/myphoto2.webp';
+import photo from '../assets/blackcoat.webp';
 import { profile, RESUME_URL } from '../data/resume';
 import useTypewriter from '../hooks/useTypewriter';
 import SocialLinks from './SocialLinks';
@@ -90,12 +90,16 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-3">
             <div className="relative overflow-hidden rounded-[1.4rem] bg-gradient-to-b from-violet-500/20 via-slate-800/40 to-ink-deep">
               <div aria-hidden="true" className="absolute inset-0 bg-dot-grid opacity-20" />
+              <div
+                aria-hidden="true"
+                className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400/20 blur-3xl"
+              />
               <img
                 src={photo}
-                alt="Portrait of Arunav Gawri"
-                width="312"
-                height="399"
-                className="relative z-10 mx-auto w-[78%] object-contain pt-8 drop-shadow-[0_24px_40px_rgba(0,0,0,0.35)]"
+                alt="Arunav Gawri wearing a black blazer"
+                width="211"
+                height="364"
+                className="relative z-10 mx-auto w-[64%] object-contain pt-2 drop-shadow-[0_24px_40px_rgba(0,0,0,0.35)]"
               />
             </div>
           </div>
