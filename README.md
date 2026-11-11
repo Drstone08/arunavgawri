@@ -99,5 +99,10 @@ curl -sI https://drstone08.github.io/arunavgawri/robots.txt
 curl -sI https://drstone08.github.io/arunavgawri/sitemap.xml
 ```
 
-Both should return `200`. Indexing usually takes days to a few weeks; requesting
-indexing only queues a crawl.
+Because this is a GitHub Pages project site, `robots.txt` lives under the
+`/arunavgawri/` path; the host root `https://drstone08.github.io/robots.txt` is
+controlled by GitHub and is not part of this repository. Nothing blocks
+crawling, and the sitemap is submitted directly in Search Console.
+
+Both URLs should return `200`. Indexing usually takes days to a few weeks;
+requesting indexing only queues a crawl.
