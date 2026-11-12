@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drstone08.github.io/arunavgawri/sitemap.xml
+Sitemap: https://arunavgawri.is-a.dev/sitemap.xml

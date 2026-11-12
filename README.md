@@ -59,7 +59,7 @@ npm run deploy
 
 ## Search visibility (SEO)
 
-The canonical site is `https://drstone08.github.io/arunavgawri/`. All metadata,
+The canonical site is `https://arunavgawri.is-a.dev/`. All metadata,
 structured data, `robots.txt`, and `sitemap.xml` point to this URL.
 
 > The Vercel deployment at `arunavgawri.vercel.app` is retired. Delete that
@@ -82,9 +82,9 @@ Files involved:
    HTML tag method. Add the provided
    `<meta name="google-site-verification" content="..." />` tag to `index.html`,
    rebuild, deploy, and click **Verify**.
-2. Submit `https://drstone08.github.io/arunavgawri/sitemap.xml` under
+2. Submit `https://arunavgawri.is-a.dev/sitemap.xml` under
    **Sitemaps**.
-3. Use **URL Inspection** on `https://drstone08.github.io/arunavgawri/` and
+3. Use **URL Inspection** on `https://arunavgawri.is-a.dev/` and
    request indexing.
 4. Repeat verification and sitemap submission in
    [Bing Webmaster Tools](https://www.bing.com/webmasters).
@@ -95,14 +95,14 @@ Files involved:
 After deploying, confirm:
 
 ```bash
-curl -sI https://drstone08.github.io/arunavgawri/robots.txt
-curl -sI https://drstone08.github.io/arunavgawri/sitemap.xml
+curl -sI https://arunavgawri.is-a.dev/robots.txt
+curl -sI https://arunavgawri.is-a.dev/sitemap.xml
 ```
 
-Because this is a GitHub Pages project site, `robots.txt` lives under the
-`/arunavgawri/` path; the host root `https://drstone08.github.io/robots.txt` is
-controlled by GitHub and is not part of this repository. Nothing blocks
-crawling, and the sitemap is submitted directly in Search Console.
+The custom domain serves the site at the root, so `robots.txt` and
+`sitemap.xml` are available directly at `https://arunavgawri.is-a.dev/`.
+GitHub Pages redirects the old `drstone08.github.io/arunavgawri/` URL to the
+custom domain once it is configured.
 
 Both URLs should return `200`. Indexing usually takes days to a few weeks;
 requesting indexing only queues a crawl.
